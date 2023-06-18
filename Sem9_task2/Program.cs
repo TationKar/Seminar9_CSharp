@@ -1,2 +1,40 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+// **Задача 65:**Задайте значения M и N.
+//  Напишите программу, которая выведет все
+//   натуральные числа в промежутке от M до N.
+
+// M = 1; N = 5. -> "1, 2, 3, 4, 5"
+// M = 4; N = 8. -> "4, 5, 6, 7, 8"
+
+
+/***Задача 67:** Напишите программу, 
+которая будет принимать на вход число и возвращать сумму его цифр.
+
+453 -> 12
+
+45 -> 9*/
+
+/***Задача 67:** Напишите программу, 
+которая будет принимать на вход число и возвращать сумму его цифр.
+
+453 -> 12
+
+45 -> 9*/
+
+Console.Clear();
+
+Console.Write("Введите число ");
+int n = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine(Rekursia(n));
+
+int Rekursia(int n)
+{
+    if(n/10 == 0)
+    {
+        return n;
+    }
+        int sum = Rekursia(n/10) + n%10;
+        Console.WriteLine(sum);
+    return sum;
+}
